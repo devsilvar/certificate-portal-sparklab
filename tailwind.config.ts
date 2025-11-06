@@ -24,6 +24,10 @@ export default {
           foreground: "hsl(var(--primary-foreground))",
           light: "hsl(var(--primary-light))",
         },
+        sparklab: {
+          blue: "hsl(var(--sparklab-blue))",
+          purple: "hsl(var(--sparklab-purple))",
+        },
         secondary: {
           DEFAULT: "hsl(var(--secondary))",
           foreground: "hsl(var(--secondary-foreground))",
@@ -57,11 +61,18 @@ export default {
       backgroundImage: {
         'gradient-hero': 'var(--gradient-hero)',
         'gradient-success': 'var(--gradient-success)',
+        'gradient-premium': 'var(--gradient-premium)',
+        'gradient-glass': 'var(--gradient-glass)',
       },
       boxShadow: {
         'card': 'var(--shadow-card)',
         'card-hover': 'var(--shadow-card-hover)',
         'button': 'var(--shadow-button)',
+        'elevated': 'var(--shadow-elevated)',
+      },
+      transitionProperty: {
+        'smooth': 'var(--transition-smooth)',
+        'bounce': 'var(--transition-bounce)',
       },
       transitionProperty: {
         'smooth': 'var(--transition-smooth)',

@@ -1,6 +1,10 @@
-import { Child } from "@/data/mockData";
-import { Button } from "@/components/ui/button";
-import { Award, Calendar, User } from "lucide-react";
+import { Child } from '@/data/mockData';
+import { Button } from '@/components/ui/button';
+import {
+  TrophyIcon,
+  CalendarDaysIcon,
+  UserIcon,
+} from '@heroicons/react/24/outline';
 
 interface ResultCardProps {
   child: Child;
@@ -9,34 +13,28 @@ interface ResultCardProps {
 
 const ResultCard = ({ child, onViewCertificate }: ResultCardProps) => {
   return (
-    <div className="bg-card rounded-xl p-6 shadow-card hover:shadow-card-hover transition-shadow border border-border">
-      <div className="flex items-start justify-between gap-4">
-        <div className="flex-1 space-y-3">
-          <div className="flex items-center gap-2">
-            <div className="h-12 w-12 rounded-full bg-gradient-hero flex items-center justify-center">
-              <User className="h-6 w-6 text-white" />
-            </div>
-            <div>
-              <h3 className="text-xl font-bold text-foreground">{child.name}</h3>
-              <p className="text-sm text-muted-foreground">Age {child.age}</p>
-            </div>
+    <div className='bg-white border border-gray-200 rounded-xl p-6 shadow-lg hover:shadow-xl transition-shadow duration-300 hover:-translate-y-1'>
+      <div className='flex items-center justify-between'>
+        <div className='flex items-center gap-4'>
+          <div className='h-12 w-12 rounded-lg bg-gray-100 flex items-center justify-center'>
+            <UserIcon className='h-6 w-6 text-gray-600' />
           </div>
-
-          <div className="space-y-2">
-            <div className="flex items-center gap-2 text-muted-foreground">
-              <Award className="h-4 w-4" />
-              <span className="text-sm">{child.program}</span>
-            </div>
-            <div className="flex items-center gap-2 text-muted-foreground">
-              <Calendar className="h-4 w-4" />
-              <span className="text-sm">Completed {child.completionDate}</span>
-            </div>
+          <div>
+            <h3 className='text-lg font-semibold text-gray-900'>
+              {child.name}
+            </h3>
+            <p className='text-sm text-gray-600'>
+              Age {child.age} • {child.course}
+            </p>
+            <p className='text-sm text-gray-500'>
+              Completed {child.completionDate}
+            </p>
           </div>
         </div>
 
         <Button
           onClick={() => onViewCertificate(child)}
-          className="bg-gradient-hero shadow-button hover:opacity-90 transition-opacity"
+          className='bg-sparklab-blue hover:bg-blue-700 text-white px-4 py-2 rounded-lg font-medium text-sm transition-colors duration-200 shadow-sm hover:shadow-md'
         >
           View Certificate
         </Button>
