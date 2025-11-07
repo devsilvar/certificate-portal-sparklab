@@ -3,6 +3,7 @@ export interface Child {
   name: string;
   age: number;
   emailAdress: string;
+  phone: string;
   certificateUrl: string;
   course: string;
   completionDate: string;

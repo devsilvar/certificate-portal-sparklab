@@ -81,22 +81,22 @@ const SearchPage = () => {
           // Searching state
           <div className='max-w-2xl mx-auto text-center'>
             <div className='mb-8'>
-              <div className='inline-flex items-center justify-center w-16 h-16 rounded-full bg-sparklab-blue/10 mb-4'>
-                <div className='w-8 h-8 border-4 border-sparklab-blue border-t-transparent rounded-full animate-spin'></div>
+              <div className='inline-flex items-center justify-center w-12 h-12 md:w-16 md:h-16 rounded-full bg-sparklab-blue/10 mb-4'>
+                <div className='w-6 h-6 md:w-8 md:h-8 border-4 border-sparklab-blue border-t-transparent rounded-full animate-spin'></div>
               </div>
-              <h2 className='text-xl font-semibold text-gray-900 mb-2'>Searching...</h2>
-              <p className='text-gray-600'>Looking for certificates matching "{searchQuery}"</p>
+              <h2 className='text-lg md:text-xl font-semibold text-gray-900 mb-2'>Searching...</h2>
+              <p className='text-gray-600 text-sm md:text-base'>Looking for certificates matching "{searchQuery}"</p>
             </div>
           </div>
         ) : results.length > 0 ? (
           // Results found
-          <div className='max-w-4xl mx-auto space-y-8'>
-            <div className='flex items-center justify-between'>
+          <div className='max-w-4xl mx-auto space-y-6 md:space-y-8'>
+            <div className='flex flex-col sm:flex-row sm:items-center justify-between gap-4'>
               <div>
-                <h2 className='text-2xl font-bold text-gray-900'>
+                <h2 className='text-xl md:text-2xl font-bold text-gray-900'>
                   Search Results
                 </h2>
-                <p className='text-gray-600 mt-1'>
+                <p className='text-gray-600 mt-1 text-sm md:text-base'>
                   Found {results.length} {results.length === 1 ? 'match' : 'matches'} for "{searchQuery}"
                 </p>
               </div>
@@ -123,15 +123,15 @@ const SearchPage = () => {
           </div>
         ) : (
           // No results found
-          <div className='max-w-2xl mx-auto text-center space-y-8'>
+          <div className='max-w-2xl mx-auto text-center space-y-6 md:space-y-8'>
             <div className='space-y-4'>
-              <div className='inline-flex items-center justify-center w-16 h-16 rounded-full bg-red-100 mb-4'>
-                <svg className='w-8 h-8 text-red-600' fill='none' stroke='currentColor' viewBox='0 0 24 24'>
+              <div className='inline-flex items-center justify-center w-12 h-12 md:w-16 md:h-16 rounded-full bg-red-100 mb-4'>
+                <svg className='w-6 h-6 md:w-8 md:h-8 text-red-600' fill='none' stroke='currentColor' viewBox='0 0 24 24'>
                   <path strokeLinecap='round' strokeLinejoin='round' strokeWidth={2} d='M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z' />
                 </svg>
               </div>
-              <h2 className='text-2xl font-bold text-gray-900'>No Results Found</h2>
-              <p className='text-gray-600 leading-relaxed'>
+              <h2 className='text-xl md:text-2xl font-bold text-gray-900'>No Results Found</h2>
+              <p className='text-gray-600 leading-relaxed text-sm md:text-base'>
                 We couldn't find any certificates for "{searchQuery}". Please check the spelling and try again,
                 or contact Sparklab support if you believe this is an error.
               </p>

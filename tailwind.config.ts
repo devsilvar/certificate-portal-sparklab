@@ -74,9 +74,7 @@ export default {
         'smooth': 'var(--transition-smooth)',
         'bounce': 'var(--transition-bounce)',
       },
-      transitionProperty: {
-        'smooth': 'var(--transition-smooth)',
-      },
+     
       borderRadius: {
         lg: "var(--radius)",
         md: "calc(var(--radius) - 2px)",

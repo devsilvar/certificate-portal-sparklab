@@ -5,7 +5,9 @@ import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import SearchPage from './pages/SearchPage';
 import CertificatePage from './pages/CertificatePage';
+import EnrollmentPage from './pages/EnrollmentPage';
 import NotFound from './pages/NotFound';
+import ScrollToTop from './components/ScrollToTop';
 
 const queryClient = new QueryClient();
 
@@ -15,9 +17,11 @@ const App = () => (
       <Toaster />
       <Sonner></Sonner>
       <BrowserRouter>
+        <ScrollToTop />
         <Routes>
           <Route path='/' element={<SearchPage />} />
           <Route path='/certificate' element={<CertificatePage />} />
+          <Route path='/enroll' element={<EnrollmentPage />} />
           <Route path='*' element={<NotFound />} />
         </Routes>
       </BrowserRouter>
